@@ -14,8 +14,8 @@ var bricks;
 
 var ballOnPaddle = true;
 
-var lives = 3;
-var score = 0;
+var lives = 5;
+var score = 5;
 
 var scoreText;
 var livesText;
@@ -70,8 +70,8 @@ function create() {
 
     ball.events.onOutOfBounds.add(ballLost, this);
 
-    scoreText = game.add.text(32, 550, 'score: 0', { font: "20px Arial", fill: "#ffffff", align: "left" });
-    livesText = game.add.text(680, 550, 'lives: 3', { font: "20px Arial", fill: "#ffffff", align: "left" });
+    scoreText = game.add.text(32, 550, 'Added 5 extra points :) score: 5', { font: "20px Arial", fill: "#ffffff", align: "left" });
+    livesText = game.add.text(680, 550, 'lives: 5', { font: "20px Arial", fill: "#ffffff", align: "left" });
     introText = game.add.text(game.world.centerX, 400, '- click to start -', { font: "40px Arial", fill: "#ffffff", align: "center" });
     introText.anchor.setTo(0.5, 0.5);
 
@@ -82,7 +82,7 @@ function create() {
 function update () {
 
     //  Fun, but a little sea-sick inducing :) Uncomment if you like!
-    // s.tilePosition.x += (game.input.speed.x / 2);
+    s.tilePosition.x += (game.input.speed.x / 2);
 
     paddle.x = game.input.x;
 
